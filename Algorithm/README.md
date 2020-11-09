@@ -3,29 +3,25 @@
 `Abstract`
 > That's from Wikipedia
 
+Algorithm, in mathematics and computer science, is a series of well-defined specific calculation steps, which are commonly used in calculation,
+data processing and automatic reasoning. As an effective method, the algorithm is used to calculate functions.
 
-Algorithm, in mathematics and computer science, is a series of well-defined specific calculation steps, which are commonly used in calculation, 
-data processing and automatic reasoning. As an effective method, the algorithm is used to calculate functions. 
 It contains a series of well-defined instructions, which can be clearly expressed in limited time and space.
 The instruction in the algorithm describes a calculation. When it is running, it can start from an initial state and initial input (possibly empty), 
 and then through a series of limited and clearly defined states, it produces output and stops in a final state. 
 The transition from one state to another is not necessarily deterministic. Some algorithms, including randomization algorithm, contain some random inputs
 
-[TOC]
-
-
-
 # 算法设计评价基本标准
 
 算法是对特定问题求解**步骤**的一种描述，如果将问题看作函数，那么算法是把输入转化为输出
 
-## 算法:
+## 算法
 
 是对特定问题求解步骤的一种描述，是为了解决一个或者一类问题给出的 一个确定的、有限长的操作序列。
 
 算法的设计依赖于数据的存储结构，因此对确定的问题，应该需求子啊适宜的存储结构上设计出一种效率较高的算法
 
-### 算法的特性：
+### 算法的特性
 
 `有穷性`：
 
@@ -47,11 +43,11 @@ The transition from one state to another is not necessarily deterministic. Some 
 
 它是一组与“输入”有确定关系的量值，是算法进行信息加工够得到的结果。这种确定关系即为算法的功能
 
-### 算法设计目标：
+### 算法设计目标
 
 `正确性`：
 
-**算法应满足具体问题的需求，正确反映求解问题对输入、输出加工处理等方面的需求**
+算法应满足具体问题的需求，正确反映求解问题对输入、输出加工处理等方面的需求
 
 1. 程序中不含语法错误，计算的结果却不能满足规格说明要求。
 2. 程序对于特定的几组输入数据能够得出满足要求的结果，而对于其他的输入数据的不出正确的计算结果；
@@ -86,7 +82,7 @@ The transition from one state to another is not necessarily deterministic. Some 
 
 ### 算法复杂度
 
-#### **算法的时间复杂度：**
+#### 算法的时间复杂度
 
 算法的效率指的是算法的执行时间随问题“规模”（通常用整型量n表示）的增长而增长的趋势
 
@@ -129,7 +125,7 @@ for i in range(10):
 >
 > 乘法执行次数为n²，则算法的时间复杂度为O(n²)
 
-#### **算法的空间复杂度：**
+#### 算法的空间复杂度
 
 算法在执行期间所需要的存储量包括：
 
@@ -145,13 +141,13 @@ for i in range(10):
 
 降低空间复杂度的核心思路就是，能用低复杂度的数据结构能解决问题，就千万不要用高复杂度的数据结构。
 
-#### 如何评定一个程序算法的好坏？
+#### 评定一个算法的好坏
 
 简而言之：在符合算法设计标准的前提下，运行的更快、所用计算资源更少。即是更好的算法
 
 请注意这里的比较级别词**更**！！！，对于算法，个人认为就是获得同一结果的同时探究**最优**解决之道
 
-##### 算法优化的思维与方向？
+##### 算法优化的思维与方向
 
 **降低复杂度，直观的思路是：**
 
@@ -169,21 +165,21 @@ for i in range(10):
 
 当然，`时间`与`空间`常常不可得兼，现实中一般更倾向时间。合适的算法和数据结构数据结构 即可产生化学反应
 
-### 如何优化算法？
+### 如何优化算法
 
 思路有：有效计算， 升维、时空转换
 
 例如：我们要对n中最大的数，那么我们就需要把所有的数都判断一次。如果需要下次能够快速的找到，就需要排序。
 
-#### 有效计算：
+#### 有效计算
 
 > 在满足算法性质下，将无用的计算剔除。从而减少计算量，达到加速的效果
 
-#### 升维：
+#### 升维
 
 > 别人每次走一步，我们一次走两步或者三步。那么就可以更快
 
-#### 时空转换：
+#### 时空转换
 
 > 缓冲&缓存
 >
@@ -207,7 +203,6 @@ for i in range(10):
 4. 最适合的解法
 
 说了这么多，来道简单的算法题目导入（同一计算机，i5, python）
-
 
 需求如下：累计求和1-n的值(1. 为防止误差，验证10次; 2. 验证每次计算次数)
 
@@ -233,14 +228,13 @@ for i in range(10):
 
 > 高斯算法，从1累加至n,等于(首项+尾项)*项数/2，等差数列通项公式
 
-```
+```python
 # Gaussian算法，无迭代算法
 def fun1(n):
     start = int(time.time())
     theSum = (n * (n + 1)) / 2
     end = int(time.time())
     return theSum, end - start, n / 2
-    
 for i in range(1000000):
     print(f"Sum is %d Required %10.100f seconds count = %d" % fun1(50**100))
 ```
