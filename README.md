@@ -6,6 +6,5 @@ If you don't know algorithms well, you won't be able to identify if you can opti
 
 `Proposal`
 
-
 I even suggest learning data structure first
 Because the data structure is the front end of the algorithm and the foundation of each programming language. There is a smooth transition all the way down
