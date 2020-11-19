@@ -1,18 +1,12 @@
-class Stack(object):
+class stack:
     def __init__(self):
-        self.stack = []
+        self.item = []
 
-    def push(self, value):  # 进栈
-        self.stack.append(value)
+    def push(self, item):
+        self.item.append(item)
 
     def pop(self):
-        if self.stack:
-            self.stack.pop()
-        else:
-            raise LookupError("stack is empty")
+        self.item.pop()
 
-    def is_empty(self):
-        return bool(self.stack)
-
-    def top(self):
-        return self.stack[-1]
+    def length(self):
+        return len(self.item)

@@ -1,7 +1,7 @@
-<<<<<<< HEAD
+
+
 # Why Data-structure？
-=======
-# Why Data-structure？
+
 Algorithm and data structure complement each other. When data structure and algorithm meet, chemical reaction will occur
 
 **I even suggest learning data structure first**
@@ -177,6 +177,3 @@ There is a smooth transition all the way down
 一个数据结构加上定义在这个数据结构上的一组操作，即构成一个抽象数据类型的定义。抽象数据类型的概念其实质和程序设计语言中的数据类型概念相同。
 
 抽象数据类型的定义仅**取决于它的一组逻辑特性，而与其在计算机内部如何表示和实现无关，**  即不论其内部结构如何变化，**只要它的数学特性不变，都不影响其外部的使用**
-
-![ADT的不同视图](D:\Boke\数据结构与算法\数据结构\Part1\ADT的不同视图.png)
->>>>>>> a421e7ca9265ce9b9b033b24289a1617a9ef37bd

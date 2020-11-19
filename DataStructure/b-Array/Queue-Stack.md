@@ -25,79 +25,44 @@
 ## Queue & Stack 关键点
 
 - Queue 先入先出:添加删除皆为O(1),查找O(N)
+
 - Stack 先入后出:添加删除皆为O(1),查找O(N)
 
-#### 实现Queue
+  #### 实现Queue（Python）
 
 ```python
-from queue import LifoQueue
-
-
 class Queue:
-
     def __init__(self):
-        self.rear = None
-        self.front = None
-        self.r = 0
-        self.f = 0
+        self.queue = []
 
-    def isEMpty(self):
-        if self.r == self.f:
-            print("The queue is empty")
-        else:
-            print("The queue is not empty")
+    def enqueue(self, item):
+        self.queue.append(item)
 
-    def push(self, data):
-        if self.f == self.r:
-            q = Queue(data)
-            self.rear = q
-            self.front = q
-            self.r = 0
-            self.f = 1
-        else:
-            q = Queue(data)
-            self.rear.next = q
-            self.rear = q
-            self.f += 1
+    def dequeue(self):
+        if len(self.queue) < 1:
+            return None
+        return self.queue.pop()
 
-    def pop(self):
-        if self.r == self.f:
-            print("The Queue is empty")
-            # return false
-        else:
-            self.front = self.front.next
-            self.f = self.f - 1
-
-    def top(self):
-        if self.r == self.f:
-            # print("empty")
-            raise EOFError("empty")
-        else:
-            print(self.front.data)
+    def length(self):
+        return len(self.queue)
 
 ```
 
-#### 实现Stack
+#### 实现Stack（Python）
 
 ```python
-class Stack(object):
+class stack:
     def __init__(self):
-        self.stack = []
+        self.item = []
 
-    def push(self, value):  # 进栈
-        self.stack.append(value)
+    def push(self, item):
+        self.item.append(item)
 
     def pop(self):
-        if self.stack:
-            self.stack.pop()
-        else:
-            raise LookupError("stack is empty")
+        self.item.pop()
 
-    def is_empty(self):
-        return bool(self.stack)
-
-    def top(self):
-        return self.stack[-1]
+    def length(self):
+        return len(self.item)
 ```
 
 ## 双端队列(duque)
@@ -293,6 +258,10 @@ class deque(object):
 
 ## 优先队列
 
+插入0(1)，删除O(log n)
+
+底层实现的数据结构较为多样与复杂：Heap、BST(binary search Tree)、AVL、Treap
+
 优先队列(priority queue)
 
 普通的队列是一种先进先出的数据结构，元素在队列尾追加，而从队列头删除。在优先队列中，元素被赋予优先级。当访问元素时，具有最高优先级的元素最先删除。优先队列具有最高级先出 （first in, largest out）的行为特征。通常采用堆数据结构来实现。
@@ -353,6 +322,10 @@ class priority_queue:
     def empty(self):
         return len(self.queue) == 0
 ```
+
+![](https://tva1.sinaimg.cn/large/0081Kckwgy1gkulvrtx9mj31ao0tk0zk.jpg)
+
+此图来自：<https://www.bigocheatsheet.com/>
 
 ## 推荐阅读
 
