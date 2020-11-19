@@ -8,7 +8,7 @@ data processing and automatic reasoning. As an effective method, the algorithm i
 
 It contains a series of well-defined instructions, which can be clearly expressed in limited time and space.
 The instruction in the algorithm describes a calculation. When it is running, it can start from an initial state and initial input (possibly empty),
-and then through a series of limited and clearly defined states, it produces output and stops in a final state. 
+and then through a series of limited and clearly defined states, it produces output and stops in a final state.
 The transition from one state to another is not necessarily deterministic. Some algorithms, including randomization algorithm, contain some random inputs
 
 # 算法设计评价基本标准
@@ -95,7 +95,6 @@ T（n） = O（f(n)）
 > f(n) 为问题规模n的某个函数；
 >
 > T（n）被称为算法的（渐进）时间复杂度（Time Complexity）
-
 > O表示法不需要给出运行时间的精确值；
 >
 > 选择f（n），通常选择比较简单的函数形式，并忽略低次项和系数
@@ -118,7 +117,7 @@ T（n） = O（f(n)）
 
 ~~~python
 for i in range(10):
-	for j in range(10):
+for j in range(10):
 ~~~
 
 > 问题规模是矩阵的阶n,算法的控制结构式双重循环，基本操作是乘法操作
@@ -199,7 +198,7 @@ for i in range(10):
 
 1. 暴力法 + 优化
 2. 引入 其他算法 + 数据结构
-3. 多种解法 
+3. 多种解法
 4. 最适合的解法
 
 说了这么多，来道简单的算法题目导入（同一计算机，i5, python）
